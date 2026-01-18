@@ -56,7 +56,7 @@
                         <li><a class="page-scroll" href="#section-intro">Abstract</a></li>
                         <li><a class="page-scroll" href="#section-background">Background</a></li>
                         <li><a class="page-scroll" href="#section-organizer">Core Paradigms</a></li>
-                        <li><a class="page-scroll" href="#section-organizers">Organizers</a></li>
+                        <li><a class="page-scroll" href="#section-organizers">Presenters</a></li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
@@ -69,7 +69,7 @@
         <div class="content">
             <h1>Efficient LLM Inference: Computation Reuse and Delegation</h1>
 	    <h2 style="color:#FFFFFF;"><b>Keywords: LLM Inference Acceleration, Key-Value Caching, Speculative Decoding, Computational Optimization</b> </h2>
-	    <h2 style="color:#FFFFFF;"><b>Event Date: TBD </b> </h2>
+	    <h2 style="color:#FFFFFF;"><b>Event Date: 2025.1.21 </b> </h2>
         </div>
     </div>
     <!-- .Jumbotron-->
@@ -102,7 +102,6 @@
 			<strong> <li style="color:black;">Computation Delegation Paradigm (Speculative Decoding) </li></strong>
 			<strong> <li style="color:black;">Collaborative Speculative Decoding Methods </li></strong>
 			<strong> <li style="color:black;">Coupled Speculative Decoding Methods </li></strong>
-			<strong> <li style="color:black;">Practical Deployment and Trade-offs </li></strong>
 			<strong> <li style="color:black;">Open Research Directions and Challenges </li></strong>
 		</ol>
 		</p>
@@ -135,7 +134,7 @@
 		</p>
 
 		<p class="large text-muted">
-		    The key to computation reuse lies in eliminating redundant operations by leveraging previously computed information across decoding steps or between similar inputs. A widely adopted strategy is <strong>key-value (KV) caching</strong>, where attention keys and values from past tokens are stored and reused at each decoding step, avoiding recomputation of self-attention for the entire context. Recent works have further explored the reuse of information within a single session or across different sessions. By retrieving or matching similar prefixes from historical inputs, these methods leverage previously generated intermediate representations, such as hidden states, attention keys/values, or prompt structures, to reduce the computation cost of LLM inference. Moreover, reuse strategies have evolved from static linear prefix matching to structured reuse based on <strong>dynamic radix trees</strong>, enabling efficient management of complex multi-turn conversation history. Some works go further by retrieving past decoding results based on the input prefix. These results serve as references for current inference, and reducing computation overhead.
+		    The key to computation reuse lies in eliminating redundant operations by leveraging previously computed information across decoding steps or between similar inputs. A widely adopted strategy is key-value (KV) caching, where attention keys and values from past tokens are stored and reused at each decoding step, avoiding recomputation of self-attention for the entire context. Recent works have further explored the reuse of information within a single session or across different sessions. By retrieving or matching similar prefixes from historical inputs, these methods leverage previously generated intermediate representations, such as hidden states, attention keys/values, or prompt structures, to reduce the computation cost of LLM inference. Moreover, reuse strategies have evolved from static linear prefix matching to structured reuse based on dynamic radix trees, enabling efficient management of complex multi-turn conversation history. Some works go further by retrieving past decoding results based on the input prefix. These results serve as references for current inference, and reducing computation overhead.
 		</p>
 
 		<p class="large text-muted">
@@ -190,6 +189,14 @@
             <div class="row text-justify">
                 <div class="col-md-12">
                    
+		<p class="large text-muted">
+		    <strong>Zipeng Gao</strong> is a PH.D. student at the University of Science and Technology of China (USTC). He received his bachelor's degree from Dalian University of Technology in 2020 and began pursuing his Ph.D. at USTC in the same year. His research interests include speculative decoding, inference optimization for LLMs, and contextual content understanding. He has published papers in several top-tier international conferences and journals in the field of computer science, including AAAI, KDD, and ACM TALLIP.
+		</p>
+
+		<p class="large text-muted">
+		    <strong>Dr. Zhi Zheng</strong> is a postdoc researcher at School of Computer Science and Technology, University of Science and Technology of China (USTC). He received his Ph.D. degree from USTC in 2024 and his B.E. degree from USTC in 2019. His research interests include Data Mining and Artificial Intelligence, especially on Large Language Models and Recommender Systems. He has published prolifically in refereed journals and conference proceedings, such as IEEE TKDE, ACM TOIS, SIGKDD, SIGIR, WWW, AAAI, IJCAI, CIKM and Recsys. He serves as top-tier conference program committee members (e.g., ICLR, NeurIPS, KDD, WWW, AAAI, IJCAI, SIGIR, etc.), and journal reviewers (e.g., TKDE, TKDD, TOIS, etc.). He received the COLING Outstanding Paper Award in 2025. More information about him can be found at <a href="https://zhengzhi-1997.github.io/" target="_blank">https://zhengzhi-1997.github.io/</a>.
+		</p>
+
 		<p class="large text-muted">
 		    <strong>Dr. Qingrong Xia</strong> is a researcher at the AI System Innovation Lab, Huawei Cloud (China). He received his doctoral degree from Soochow University, China, in 2022. His research interests include syntactic/semantic parsing and pre-trained language models, with publications in top-tier conferences and journals such as AAAI, ACL, TACL, EMNLP, COLING, NAACL, etc. He actively contributes to the academic community as a reviewer, including AAAI, ACL, EMNLP, etc. He has won the best paper award in COLING 2022.
 		</p>
