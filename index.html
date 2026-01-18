@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Large Language Models for Recommendation</title>
+    <title>Efficient LLM Inference: Computation Reuse and Delegation</title>
 
     <!-- favicon 
     <link href="favicon.png" rel=icon>-->
@@ -46,7 +46,6 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <!--<a class="navbar-brand page-scroll" href="#page-top"><img src="img/logo.png" alt=""></a>-->
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -54,349 +53,172 @@
                     <ul class="nav navbar-nav">
                         <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                         <li class="hidden"><a href="#page-top"></a></li>
-                        <li><a class="page-scroll" href="#section-intro">Intro</a></li>
-                        <!-- <li><a class="page-scroll" href="#section-cfp">Cfp</a></li>
-                        <li><a class="page-scroll" href="#section-date">DATES</a></li>
-                        <li><a class="page-scroll" href="#section-ajenda">Program</a></li>
-                        <li><a class="page-scroll" href="#section-speaker">Speakers</a></li>
-                        <li><a class="page-scroll" href="#section-papers">Accepted Papers</a></li>-->
-                        <li><a class="page-scroll" href="#section-organizer">LLM4Rec</a></li>
+                        <li><a class="page-scroll" href="#section-intro">Abstract</a></li>
+                        <li><a class="page-scroll" href="#section-background">Background</a></li>
+                        <li><a class="page-scroll" href="#section-organizer">Core Paradigms</a></li>
+                        <li><a class="page-scroll" href="#section-organizers">Organizers</a></li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
             </div>
             <!-- /.container -->
         </nav>
-
-        <!-- .nav -->
-
     </header>
 
     <div class="jumbotron text-center">
         <div class="content">
-            <h1>Large Language Models for Recommendation</h1>
-	    <!-- <h2 style="color:#FFFFFF;"><b>Keywords: Recommender Systems, Robustness, Fairness, Explainability, Privacy, Environmental Well-being, Accountability, Auditability</b> </h2>	 -->
+            <h1>Efficient LLM Inference: Computation Reuse and Delegation</h1>
+	    <h2 style="color:#FFFFFF;"><b>Keywords: LLM Inference Acceleration, Key-Value Caching, Speculative Decoding, Computational Optimization</b> </h2>
 	    <h2 style="color:#FFFFFF;"><b>Event Date: TBD </b> </h2>
-	    <!-- <h2 style="color:#FFFFFF;"><b>Zoom Meeting ID: 851 066 0728, Passcode: 5511 <a href="https://polyu.zoom.us/j/8510660728">Link</a> </b> </h2> -->
-	    	    <h2 style="color:#FFFFFF;"><b>Our Survey Paper: <a href="https://arxiv.org/pdf/2305.19860"> A Survey on Large Language Models for Recommendation
-</a> </b> </h2>
-
-	    
-	    
-	    
-
-
-	    
-	    
-            <!--<div class="event-date">9:00 - 11:45 PM, April 16, 2021 (EST time)</div>-->
-	     <!--
-	    <h2 style="color:#FFFFFF;"><b>Zoom Link:  <a href="https://TBD">TBD </a ></b> </h2>
-
-		<h2 style="color:#FFFFFF;"><b>Introduction to Deep Recommender System (DRS)</b> </h2>
-	    <h2 style="color:#FFFFFF;"><b>Preliminary of Automated Machine Learning (AutoML)</b> </h2>
-	    <h2 style="color:#FFFFFF;"><b>AutoML for DRS Embedding Components</b> </h2>
-	    <h2 style="color:#FFFFFF;"><b>AutoML for DRS Interaction Components</b> </h2>
-	    <h2 style="color:#FFFFFF;"><b>AutoML for Whole DRS Architecture Search</b>  </h2>
-            <h2 style="color:#FFFFFF;"><b>Conclusion and Future Direction</b>  </h2>
-            
-	    -->
-	    <!--<h2 style="color:#0F1555;"><b><a href="https://msu.zoom.us/j/94465359383">Zoom Link to Tutorial</a></b></h2>-->
-            <!--<div class="event-date">Summit 1 - Ground Level, Egan, Anchorage, Alaska - USA</div>
-            <!--<p class="lead">It's a tag line, where you can write a key point of your idea. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
-            <button type="button" class="btn btn-default btn-lg">STAY IN THE LOOP</button>-->
         </div>
     </div>
     <!-- .Jumbotron-->
     
     
-    <!-- Introduction Section -->
+    <!-- Abstract Section -->
     <section id="section-intro" class="section-wrapper about-event">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h1>INTRO</h1>
+                    <h1>ABSTRACT</h1>
                 </div>
             </div>
             <div class="row text-justify">
                 <div class="col-md-12">
                    
-			<p class="large text-muted">
-			    Recommender systems have become one of the most impactful AI applications, significantly influencing various domains such as e-commerce, media streaming, and social platforms. As these systems continue to evolve, integrating more advanced methodologies has become crucial. In recent years, Large Language Models (LLMs) have shown immense potential to enhance recommender systems by capturing deeper contextual relationships and understanding user preferences in a more nuanced manner.
-			</p>
+		<p class="large text-muted">
+		    Large language models (LLMs) have recently demonstrated remarkable generation capabilities, achieving human-level or even superhuman performance on a wide range of downstream tasks. However, their substantial inference cost—driven by the inherently sequential nature of autoregressive decoding—has become a significant bottleneck for real-world deployment. This challenge has motivated the development of acceleration techniques based on computational optimization.
+		</p>
                     
 		<p class="large text-muted">
-			
-            In this tutorial, we aim to provide a comprehensive review and discussion of the intersection between LLMs and recommender systems. We will examine how LLMs contribute to key recommendation tasks through both discriminative and generative modeling approaches. The tutorial will introduce various paradigms, including fine-tuning, prompt tuning, and in-context learning, along with a detailed taxonomy of LLM-based recommender models. In addition, we will explore the challenges and opportunities presented by these models, including issues related to bias, recommendation prompt design, and evaluation techniques.
-            
+			In this tutorial, we introduce a taxonomy that organizes existing approaches into two major families: <strong>computation reuse</strong> (e.g., key-value caching, prefix caching, parameter reuse), which reuses past computations to avoid redundancy, and <strong>computation delegation</strong>, which delegates the generation of draft tokens to auxiliary or intrinsic models, with verification performed by the target model. We cover the theoretical foundations, core algorithms, and practical implementations of these methods, concluding with their trade-offs, deployment challenges, and open research directions. This tutorial aims to equip both academic researchers and industry practitioners with the necessary knowledge to build more efficient LLM inference systems.
 		</p>
 		
-		<p class="large text-muted">
-			
-        By offering a clear overview of recent advances and research directions, this tutorial aims to equip both academic researchers and industry practitioners with the necessary knowledge to leverage LLMs in creating more effective and trustworthy recommender systems.
-				
-			
-			
-		</p>
-		
-		<p class="large text-muted">
-				
-		<div> Time: TBD</div> 
-		
-		<!-- <div>Zoom Meeting ID: 851 066 0728, Passcode: 5511, <a href="https://polyu.zoom.us/j/8510660728"> Link </a> </div> -->
-			
-		<div>Our Survey Paper: <a href="https://arxiv.org/pdf/2305.19860"> A Survey on Large Language Models for Recommendation
-</a></div>
-
-			
-	       <!-- <div>Tutorial Website: <a href="https://advanced-recommender-systems.github.io/trustworthiness-tutorial/">https://advanced-recommender-systems.github.io/trustworthiness-tutorial/</a> </div> -->
-
-			
-		</p>	
-		    
-		<!-- <h2 style="color:black;"><b>Tutorial Syllabus <a href="http://shorturl.at/ELO69">[Slides]</a> <a href="http://shorturl.at/ELO69"> [Video]</a></b> </h2> -->
-			
-		<!-- <div>Our Survey Paper: <a href="https://arxiv.org/pdf/2209.10117.pdf"> A Comprehensive Survey on Trustworthy Recommender Systems 
-</a></div>  -->
 		<p class="large text-muted">
 		The topics of this tutorial include (but are not limited to) the following:
 		<ol>	
-			<strong> <li style="color:black;">Introduction to Large Language Models for Recommendation (LLM4Rec) </li>  </strong>
-			<strong> <li style="color:black;">Modeling Paradigms and Taxonomy </li></strong>
-			<strong> <li style="color:black;">Discriminative LLMs for Recommendation </li></strong>
-			<strong> <li style="color:black;">Generative LLMs for Recommendation Based-on the Non-tuning Paradigm </li></strong>
-			<strong> <li style="color:black;">Generative LLMs for Recommendation Based-on the Tuning Paradigm </li></strong>
-			<strong> <li style="color:black;">Discussions and Future Directions </li></strong>
-			<!-- <strong> <li style="color:black;">Accountability & Auditability </li></strong>
-			<strong> <li style="color:black;">Dimension Interactions & Future Directions </li></strong> -->
-			
+			<strong> <li style="color:black;">Background and Motivation for LLM Inference Acceleration </li>  </strong>
+			<strong> <li style="color:black;">Computation Reuse Paradigm (Key-Value Caching, Prefix Caching, Parameter Reuse) </li></strong>
+			<strong> <li style="color:black;">Computation Delegation Paradigm (Speculative Decoding) </li></strong>
+			<strong> <li style="color:black;">Collaborative Speculative Decoding Methods </li></strong>
+			<strong> <li style="color:black;">Coupled Speculative Decoding Methods </li></strong>
+			<strong> <li style="color:black;">Practical Deployment and Trade-offs </li></strong>
+			<strong> <li style="color:black;">Open Research Directions and Challenges </li></strong>
 		</ol>
-	       <!-- <div>Slides: <strong><a href="doc/2023-WWW-Trustworthy-Recommender-Systems-Slides-1.pdf">[TRec-Slides-1]</a> <a href="doc/2023-WWW-Trustworthy-Recommender-Systems-Slides-2.pdf">[TRec-Slides-2]</a></strong></div>
-		<div>Videos: TBD</div>
-	       <div>Link to The Web Conference 2023 Official Website:  <a href="https://www2023.thewebconf.org/program/tutorials/">https://www2023.thewebconf.org/program/tutorials/</a > </div> -->
-
-	      
-	     
-
-
-
 		</p>
                 </div>
             </div>
         </div>
     </section>
-    
 
-	
-	
-	
+    <!-- Background Section -->
+    <section id="section-background" class="section-wrapper about-event">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h1>BACKGROUND AND TOPIC</h1>
+                </div>
+            </div>
+            <div class="row text-justify">
+                <div class="col-md-12">
+                   
+		<p class="large text-muted">
+		    Large language models (LLMs) have recently exhibited outstanding cross-task generalization and generation quality, achieving human-level or even superhuman performance on a range of downstream tasks, positioning them as a cornerstone technology in the pursuit of artificial general intelligence.
+		</p>
 
+		<p class="large text-muted">
+		    However, while training benefits from large-scale parallelism, inference in LLMs remains inherently sequential. This autoregressive process requires executing the whole model at each decoding step, which leads to substantial latency and computational redundancy—especially in long-context scenarios—posing serious challenges for deployment at scale.
+		</p>
+
+		<p class="large text-muted">
+		    To address these challenges, recent research has increasingly focused on computational optimization strategies, aiming to reduce redundant processing and accelerate generation without modifying model parameters or degrading output quality. These approaches fall broadly into two complementary paradigms: <strong>computation reuse</strong> and <strong>computation delegation</strong>. Computation reuse focuses on eliminating repeated work by reusing intermediate results from previous or similar decoding steps. This includes techniques such as key-value caching, prefix caching, which avoid recalculating hidden states or attention activation values when possible. In contrast, computation delegation, which is also known as speculative decoding, shifts part of the inference workload to auxiliary or intrinsic draft models, which generate candidate sequences that are selectively verified by the target model. This draft-then-verify pattern enables partial parallelism in the otherwise sequential decoding process. Together, these methods offer generality, compatibility with existing models, and substantial speedups. They have been widely adopted in modern LLM inference systems, including FasterTransformer, vLLM, and OpenAI's production stack.
+		</p>
+
+		<p class="large text-muted">
+		    The key to computation reuse lies in eliminating redundant operations by leveraging previously computed information across decoding steps or between similar inputs. A widely adopted strategy is <strong>key-value (KV) caching</strong>, where attention keys and values from past tokens are stored and reused at each decoding step, avoiding recomputation of self-attention for the entire context. Recent works have further explored the reuse of information within a single session or across different sessions. By retrieving or matching similar prefixes from historical inputs, these methods leverage previously generated intermediate representations, such as hidden states, attention keys/values, or prompt structures, to reduce the computation cost of LLM inference. Moreover, reuse strategies have evolved from static linear prefix matching to structured reuse based on <strong>dynamic radix trees</strong>, enabling efficient management of complex multi-turn conversation history. Some works go further by retrieving past decoding results based on the input prefix. These results serve as references for current inference, and reducing computation overhead.
+		</p>
+
+		<p class="large text-muted">
+		    For computation delegation, also known as speculative decoding, LLMs shift part of the generation workload from the large language model to more efficient draft generators. In this paradigm, lightweight auxiliary models first generate candidate sequences, and the target model then verifies them in parallel, thus reducing the number of full forward passes through the large model. Based on the relationship between the auxiliary draft model and the target model, these methods can be further categorized into two types: collaborative speculative decoding and coupled speculative decoding.
+		</p>
+
+		<p class="large text-muted">
+		    In collaborative speculative decoding, the draft and target models operate as separate, loosely coupled systems. Drafting is typically handled by smaller, efficient models that propose full or partial candidate sequences, which are then verified in parallel by the larger target model. This paradigm allows for easy modular integration and is compatible with pre-trained models. In contrast, coupled speculative decoding establishes a tighter interaction between the draft and target models. The draft generation process is either embedded into the internal architecture of the target model or trained using intermediate representations extracted from it. This design enables more accurate drafts and higher verification efficiency, but often requires additional training and compromises modularity.
+		</p>
+
+		<p class="large text-muted">
+		    In this tutorial, we provide a systematic overview of decoding-time computational optimization techniques in large language models, centered around two core paradigms: computation reuse, which eliminates redundant operations, and computation delegation, which reframes generation as a speculative draft-and-verify process. We will introduce representative methods, summarize recent research progress, and examine practical deployment challenges. By clarifying the design space and trade-offs of these strategies, this tutorial aims to equip both researchers and practitioners with the tools to build more efficient LLM-based systems.
+		</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Paradigms Section -->
     <section id="section-organizer" class="section-wrapper team gray-bg">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-title">
-                        <h1>Three Modeling Paradigms of Large Language Models for Recommendation (LLM4Rec)</h1>
+                        <h1>Core Paradigms: Computation Reuse and Computation Delegation</h1>
                     </div>
                 </div>
             </div>
 		
             <div class="row">
-		    
-		 <!--  <div class="col-sm-6 col-md-3"> -->
                     <figure class="image">
-                        <a href="img/modeling_way.pdf"><img src="img/modeling_way.png" class="img-responsive" alt="Image" style="text-align: center;"></a>
+                        <a href="img/modeling_way.pdf"><img src="img/paradigm.png" class="img-responsive" alt="Image" style="text-align: center;"></a>
                         <figcaption class="caption text-center">
-				
-                        <!--    <h3>Xiangyu Zhao.   -->
-                        <!--    <small>City University of Hong Kong</small>     --> 
-                            </h3>
-                            <ul class="social-links">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                            </ul>
+                            <!-- <h3>Paradigm Overview</h3> -->
                         </figcaption>
                     </figure>
-             <!--   </div>  -->
-                <!-- /.col-sm-6 -->
-		    
-		<!--   
-                <div class="col-sm-6 col-md-3">
-                    <figure class="thumbnail">
-                        <a href="https://wenqifan03.github.io/"><img src="img/wenqi2.jpg" class="img-responsive" alt="Image"></a>
-                        <figcaption class="caption text-center">
-                            <h3>Wenqi Fan
-                                <small>Hong Kong Polytechnic University</small>
-                            </h3>
-                            <ul class="social-links">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                            </ul>
-                        </figcaption>
-                    </figure>
-                </div> -->
-                <!-- /.col-sm-6 -->
-
-		    
-		    <!--
-                 <div class="col-sm-6 col-md-3">
-                    <figure class="thumbnail">
-                        <a href="https://scholar.google.com/citations?user=jlBcPn8AAAAJ"><img src="img/huifeng.jpeg" class="img-responsive" alt="Image"></a>
-                        <figcaption class="caption text-center">
-                            <h3>Huifeng Guo
-                                <small>Huawei Noah’s Ark Lab</small>
-                            </h3>
-                            <ul class="social-links">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                            </ul>
-                        </figcaption>
-                    </figure>
-                </div> -->
-                <!-- /.col-sm-6 -->               
-                
-         </div>
-         <!-- .row -->
-		
-		
-	<!-- <div class="row">           -->
-                <!--
-                <div class="col-sm-6 col-md-3">
-                    <figure class="thumbnail">
-                        <a href="https://scholar.google.com/citations?user=RZU1wxsAAAAJ"><img src="img/ChenBo2.jpeg" class="img-responsive" alt="Image"></a>
-                        <figcaption class="caption text-center">
-                            <h3>Bo Chen
-                                <small>Huawei Noah’s Ark Lab</small>
-                            </h3>
-                            <ul class="social-links">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                            </ul>
-                        </figcaption>
-                    </figure>
-                </div> -->
-                <!-- /.col-sm-6 -->               
-                
-
-		<!--
-                <div class="col-sm-6 col-md-3">
-                    <figure class="thumbnail">
-                        <a href="."><img src="img/yejing.jpeg" class="img-responsive" alt="Image"></a>
-                        <figcaption class="caption text-center">
-                            <h3>Yejing Wang
-                                <small>City University of Hong Kong</small>
-                            </h3>
-                            <ul class="social-links">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                            </ul>
-                        </figcaption>
-                    </figure>
-                </div> -->
-                <!-- /.col-sm-6 -->
-	   
-		
-		
-		
-		<!--
-	   <div class="col-sm-6 col-md-3">
-                    <figure class="thumbnail">
-                        <a href="https://scholar.google.com.sg/citations?user=fUtHww0AAAAJ&hl=en"><img src="img/RuimingTang.jpeg" class="img-responsive" alt="Image"></a>
-                        <figcaption class="caption text-center">
-                            <h3>Ruiming Tang
-                                <small>Huawei Noah’s Ark Lab</small>
-                            </h3>
-                            <ul class="social-links">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                            </ul>
-                        </figcaption>
-                    </figure>
-                </div> -->
-                <!-- /.col-sm-6 --> 
-		
-		
-		
-		
-		
-
             </div>
-		
-		
             <!-- .row -->
-
-            
         </div>
         <!-- /.container -->
     </section>
     <!-- .team -->
-	
 
-    
-	
-
-<!-- Presenters’ Biography -->
-    <section id="section-intro" class="section-wrapper about-event">
+    <!-- Organizers Section -->
+    <section id="section-organizers" class="section-wrapper about-event">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h1>Presenters’ Biography</h1>
+                    <h1>Presenters' Biography</h1>
                 </div>
             </div>
             <div class="row text-justify">
                 <div class="col-md-12">
                    
 		<p class="large text-muted">
-<a href="https://zhengzhi-1997.github.io/"><strong>Dr. Zhi Zheng</strong></a > is a postdoc researcher at School of Computer Science and Technology, University of Science and Technology of China (USTC). He received his Ph.D. degree from USTC in 2024 and his B.E. degree from USTC in 2019. His research interests include Data Mining and Artificial Intelligence, especially on Large Language Models and Recommender Systems. He has published prolifically in refereed journals and conference proceedings, such as IEEE TKDE, ACM TOIS, SIGKDD, SIGIR, WWW, AAAI, IJCAI, CIKM and Recsys. He serves as top-tier conference program committee members (e.g., ICLR, NeurIPS, KDD, WWW, AAAI, IJCAI, SIGIR, etc.), and journal reviewers (e.g., TKDE, TKDD, TOIS, etc.). More information about him can be found at https://zhengzhi-1997.github.io/.
-		
-        </p>
-		<p class="large text-muted">	
- <a href="https://www.admcube.online/people/teacher/likang\_wu"><strong>Dr. Likang Wu</strong> </a >is a lecturer of the College of Management and Economics at Tianjin University, China. He received his Ph.D. degree from University of Science and Technology of China (USTC) in 2024. His research interests are in the broad areas of Data Mining and Artificial Intelligence, with a particular focus on Large Language Models, Decision Systems, and Recommender Systems. He has published innovative papers in top-tier journals and conferences such as TKDE, TKDD, Pattern Recognition, KDD, WWW, AAAI, IJCAI, SIGIR, EMNLP, and CIKM. He serves as top-tier conference program committee members (e.g., ICLR, NeurIPS, KDD, WWW, AAAI, IJCAI, SIGIR, etc.), and journal reviewers (e.g., TPAMI, TKDE, TMC, TKDD, TOIS, TNNLS, etc.). More information about him can be found at https://www.admcube.online/people/teacher/likang\_wu.
-		
-        </p>
+		    <strong>Dr. Qingrong Xia</strong> is a researcher at the AI System Innovation Lab, Huawei Cloud (China). He received his doctoral degree from Soochow University, China, in 2022. His research interests include syntactic/semantic parsing and pre-trained language models, with publications in top-tier conferences and journals such as AAAI, ACL, TACL, EMNLP, COLING, NAACL, etc. He actively contributes to the academic community as a reviewer, including AAAI, ACL, EMNLP, etc. He has won the best paper award in COLING 2022.
+		</p>
+
 		<p class="large text-muted">
-<a href="."> <strong>Dr. Xian Wu</strong></a > is the director of Tencent Youtu Lab, Jarvis Research Center. Before joining Tencent, he worked as a Senior Scientist Manager and a Staff Researcher in Microsoft and IBM Research. Xian Wu received his PhD degree from Shanghai Jiao Tong University. His research interests includes Medical AI, Natural Language Processing and Multi-Modal modeling. Xian Wu has published papers in Nature Computational Science, NPJ digital medicine, T-PAMI, CVPR, NeurIPS, ACL, WWW, KDD, AAAI, IJCAI etc. He also served as PC member of BMJ, T-PAMI, TKDE, TKDD, TOIS, TIST, CVPR, ICCV, AAAI etc.
-    
-		</p>	
-        
-        <p class="large text-muted">
-            <a href="."> <strong>Prof. Hui Xiong</strong></a > is a Chair Professor, Associate Vice President (Knowledge Transfer), and Head of the AI Thrust at Hong Kong University of Science and Technology (Guangzhou). His research interests span Artificial Intelligence, data mining, and mobile computing. He obtained his PhD in Computer Science from the University of Minnesota, USA. Dr. Xiong has served on numerous organization and program committees for conferences, including as Program Co-Chair for the Industrial and Government Track for the 18th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (KDD), Program Co-Chair for the IEEE 2013 International Conference on Data Mining (ICDM), General Co-Chair for the 2015 IEEE International Conference on Data Mining (ICDM), and Program Co-Chair of the Research Track for the 2018 ACM SIGKDD International Conference on Knowledge Discovery and Data Mining. He received several awards, such as the 2021 AAAI Best Paper Award and the 2011 IEEE ICDM Best Research Paper award. For his significant contributions to data mining and mobile computing, he was elected as a Fellow of both AAAS and IEEE in 2020.
-                
-                    </p>
-			
-			
+		    <strong>Dr. Zhefeng Wang</strong> received the BE and PhD degrees in computer science from the University of Science and Technology of China, Hefei, in 2012 and 2017 respectively. He is currently working as a technical expert with Huawei Cloud, Hangzhou. His research interests include natural language processing, large language model, and AI system. He has published more than 50 papers in refereed conference proceedings and journals such as AAAI, ACL, ICML, and IEEE Transactions on Knowledge and Data Engineering.
+		</p>
+
+		<p class="large text-muted">
+		    <strong>Dr. Baoxing Huai</strong>, Deputy Director of Huawei Cloud AI System Innovation Lab and Vice Chair of the Large Model and Generation Technical Committee (CIPS), holds a Ph.D. from USTC. His research spans AI systems, large models, NLP, machine learning, and data mining, with 40+ papers published at venues including AAAI, IJCAI, ACL, and TKDE. He brings deep AI product expertise, extensive algorithm optimization and B2B implementation experience, and 50+ invention patents.
+		</p>
+
+		<p class="large text-muted">
+		    <strong>Dr. Tong Xu</strong> is currently working as a professor at University of Science and Technology of China (USTC), China. He has authored more than 100 top-tier journal and conference papers in related fields, including TKDE, TMC, TMM, TOMM, KDD, SIGIR, WWW, ACM MM, etc. He was the recipient of several paper awards of top conferences, including ACL and COLING, etc.
+		</p>
+
+		<p class="large text-muted">
+		    <strong>Dr. Enhong Chen</strong> is a professor and vice dean of the School of Computer Science, USTC. His general area of research includes data mining, machine learning and social network analysis. He has published more than 300 papers in refereed conferences and journals, including Nature Communications, IEEE/ACM Transactions, KDD, NIPS, IJCAI and AAAI, etc. He received the Best Application Paper Award on KDD-2008, the Best Research Paper Award on ICDM-2011, and the Best of SDM-2015. His research is supported by the National Science Foundation for Distinguished Young Scholars of China.
+		</p>
                 </div>
             </div>
         </div>
- </section>
-	
-	
-	
-    
-	<!--<script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=tt&d=HLV3wzuoy5w6fdv87RM292yQj8Fx-ZVDC2rRxEMmb4c"></script>
-	
-	<script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=Acuh9imKmpIQ6hMaZY-dWCyM9D0G1hr2tY5OxSXKd64&cl=ffffff&w=300&t=tt"></script>-->
-	
-	<!-- <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=Fq6CbZOq1h3RPZeSeuIPhIeTeTwnXH_K-1qudBFjbd8&cl=ffffff&w=300&t=tt"></script>
-       
-	 <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=TEhFKRv_Q2W5AaLVT1YP5lKcTW9k_6-6OY9leR1znNQ&cl=ffffff&w=300&t=tt"></script>
-       -->
+    </section>
+
     <footer class="footer">
         <div class="copyright-section">
             <div class="container">
                 <div class="col-md-12">
-                    <div class="copytext text-center">Copyright &copy; 2018.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">Webpage Template</a></div>
+                    <div class="copytext text-center">Copyright &copy; 2024. All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">Webpage Template</a></div>
                 </div>
             </div>
             <!-- .container -->
